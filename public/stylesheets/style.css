@@ -1,0 +1,82 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2019/11/931/524/LAX-airport.jpg?ve=1&tl=1');
+  background-position: center;
+}
+
+button{
+  margin: 5px;
+}
+
+#details {
+  color: #00B7FF;
+}
+
+i{
+  color: red;
+}
+
+li {
+  color: green;
+}
+
+.list{
+  color: red;
+  
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav {
+  float: left;
+}
+
+.nav {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav:hover {
+  background-color: #111;
+  color: white;
+}
+
+form {
+  display: inline-block;
+}
+
+button{
+  color: red;
+}
+
+html, li, td{
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: red;    }
+  20%{    color: orange; }
+  40%{    color: yellow; }
+  60%{    color:green;  }
+  80%{   color: blue;    }
+  100%{   color: purple;    }
+}
+
+#login{
+ text-align: end;
+ color: red;
+}
+
+h1{
+  text-align: center;
+}

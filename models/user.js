@@ -17,7 +17,7 @@ const userSchema = new Schema({
     email: String, 
     lineupName: String,
     avatar: String,
-    lineup: [lineupSchema],
+    lineups: [lineupSchema],
     googleId: String,
     },
     {

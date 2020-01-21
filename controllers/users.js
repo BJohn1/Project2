@@ -19,7 +19,7 @@ function index(req, res, next) {
     // Passing search values, name & sortKey, for use in the EJS
     res.render('users/index', {
       users,
-      use: req.user,
+      user: req.user,
       name: req.query.name,
       sortKey
     });
@@ -27,15 +27,15 @@ function index(req, res, next) {
 }
 
 function addLineup(req, res, next) {
-  req.user.lineup.push(req.body);
+  req.user.lineups.push(req.body);
   req.user.save(function(err) {
     res.redirect('/users');
   });
 }
 
 function delLineup(req, res, next) {
-  User.findOne({'lineup._id': req.params.id}, function(err, user) {
-    user.lineup.id(req.params.id).remove();
+  User.findOne({'lineups._id': req.params.id}, function(err, user) {
+    user.lineups.id(req.params.id).remove();
     user.save(function(err) {
       res.redirect('/users');
     });

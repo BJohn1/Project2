@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const lineupSchema = new Schema({
+    teamName: String,
     pointGuard:{type: String, enum: ['AUS', 'DAL', 'LAX', 'SEA']},
     shootingGuard:{type: String, enum: ['AUS', 'DAL', 'LAX', 'SEA']},
     smallForward:{type: String, enum: ['AUS', 'DAL', 'LAX', 'SEA']},
@@ -14,8 +15,10 @@ const lineupSchema = new Schema({
 const userSchema = new Schema({
     name: String,
     email: String, 
-    googleId: String,
+    lineupName: String,
+    avatar: String,
     lineup: [lineupSchema],
+    googleId: String,
     },
     {
     timestamps: true

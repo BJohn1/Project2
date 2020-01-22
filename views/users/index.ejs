@@ -27,24 +27,24 @@
       <div class="container">
         <div class="row">
           <div id="users" class="col s12">
-            <% users.forEach(function(user) { %>
+            <% users.forEach(function(u) { %>
               <div class="card blue-grey">
                 <div class="card-content white-text">
                   <div>
                     <span class="card-title">
-                      <% if (user.avatar) { %>
-                        <img src="<%= user.avatar %>" alt="" class="circle responsive-img">&nbsp;&nbsp;
+                      <% if (u.avatar) { %>
+                        <img src="<%= u.avatar %>" alt="" class="circle responsive-img">&nbsp;&nbsp;
                       <% } else { %>
-                        <i class="small material-icons">USER:</i>
+                        <i class="small material-icons">u:</i>
                       <% } %>
-                      <span class="user-name"><%= user.name %></span>
-                      <% if (user.cohort) { %>
-                        <span class="badge white">SEI <%= user.cohort %></span>
+                      <span class="u-name"><%= u.name %></span>
+                      <% if (u.cohort) { %>
+                        <span class="badge white">SEI <%= u.cohort %></span>
                       <% } %>
                     </span>
                   </div>
                   <ul class="collection">
-                    <% user.lineups.forEach(function(lineup) { %>
+                    <% u.lineups.forEach(function(lineup) { %>
                       <li class="collection-item blue-grey-text text-darken-2">
                         <!-- Add delete form - don't forget to install method-override -->
                         <span class="title"><%- lineup.pointGuard %></span>
@@ -52,7 +52,7 @@
                         <span class="title"><%- lineup.smallForward %></span>
                         <span class="title"><%- lineup.powerForward %></span>
                         <span class="title"><%- lineup.center %></span>
-                        <% if (user._id.equals(user && user._id)) { %>
+                        <% if (u._id.equals(user && user._id)) { %>
                           <form action="/lineups/<%= lineup._id %>?_method=DELETE" method="POST" class="secondary-content">
                             <button type="submit" class="btn-small red-text">X</button>
                           </form>
@@ -60,7 +60,7 @@
                       </li>
                     <% }) %>
                   </ul>
-                  <% if (user._id.equals(user && user._id)) { %>
+                  <% if (u._id.equals(u && u._id)) { %>
                     <div class="card-action">
                       <form action="/lineups" method="POST">
                         <label>Point Guard

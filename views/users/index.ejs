@@ -43,13 +43,6 @@
                   <span>Sort by Cohort</span>
                 </label>
               </p>
-              <p>
-                <label for="sort-name">
-                  <input name="sort" type="radio" id="sort-name" value="name" class="with-gap"
-                    <%= sortKey === 'name' ? 'checked' : '' %> >
-                  <span>Sort by Name</span>
-                </label>
-              </p>
             </div>
           </form>
         </div>
@@ -75,7 +68,11 @@
                     <% user.lineups.forEach(function(lineup) { %>
                       <li class="collection-item blue-grey-text text-darken-2">
                         <!-- Add delete form - don't forget to install method-override -->
-                        <span class="title"><%- lineup.text %></span>
+                        <span class="title"><%- lineup.pointGuard %></span>
+                        <span class="title"><%- lineup.shootingGuard %></span>
+                        <span class="title"><%- lineup.smallForward %></span>
+                        <span class="title"><%- lineup.powerForward %></span>
+                        <span class="title"><%- lineup.center %></span>
                         <% if (user._id.equals(user && user._id)) { %>
                           <form action="/lineups/<%= lineup._id %>?_method=DELETE" method="POST" class="secondary-content">
                             <button type="submit" class="btn-small red-text">X</button>
@@ -87,7 +84,46 @@
                   <% if (user._id.equals(user && user._id)) { %>
                     <div class="card-action">
                       <form action="/lineups" method="POST">
-                        <input type="text" name="text" class="white-text">
+                        <label>Point Guard
+                        <select name="pointGuard">
+                            <option value="AUS">AUSTIN</option>
+                            <option value="DAL">DALLAS</option>
+                            <option value="LAX">LOS ANGELES</option>
+                            <option value="SEA">SEATTLE</option>
+                        </select> </label
+                        ><br />
+                        <label>Shooting Guard
+                            <select name="shootingGuard">
+                                <option value="AUS">AUSTIN</option>
+                                <option value="DAL">DALLAS</option>
+                                <option value="LAX">LOS ANGELES</option>
+                                <option value="SEA">SEATTLE</option>
+                            </select> </label
+                            ><br />
+                            <label>Small Forward
+                                <select name="smallForward">
+                                    <option value="AUS">AUSTIN</option>
+                                    <option value="DAL">DALLAS</option>
+                                    <option value="LAX">LOS ANGELES</option>
+                                    <option value="SEA">SEATTLE</option>
+                                </select> </label
+                                ><br />
+                                <label>Power Forward
+                                    <select name="powerForward">
+                                        <option value="AUS">AUSTIN</option>
+                                        <option value="DAL">DALLAS</option>
+                                        <option value="LAX">LOS ANGELES</option>
+                                        <option value="SEA">SEATTLE</option>
+                                    </select> </label
+                                    ><br />
+                                    <label>Center
+                                        <select name="center">
+                                            <option value="AUS">AUSTIN</option>
+                                            <option value="DAL">DALLAS</option>
+                                            <option value="LAX">LOS ANGELES</option>
+                                            <option value="SEA">SEATTLE</option>
+                                        </select> </label
+                                        ><br />
                         <button type="submit" class="btn white-text">Add lineup</button>
                       </form>
                     </div>

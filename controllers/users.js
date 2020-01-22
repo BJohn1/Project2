@@ -26,8 +26,9 @@ function index(req, res, next) {
   });
 }
 
-function addLineup(req, res, next) {
+function addLineup(req, res) {
   req.user.lineups.push(req.body);
+  console.log(req.user)
   req.user.save(function(err) {
     res.redirect('/users');
   });

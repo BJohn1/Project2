@@ -52,9 +52,9 @@
                         <span class="title"><%- lineup.smallForward %></span>
                         <span class="title"><%- lineup.powerForward %></span>
                         <span class="title"><%- lineup.center %></span>
-                        <form action="/lineups/<%= lineup._id %>/comments" method="GET" class="secondary-content">
-                            <a href='/lineups/show.ejs' type="submit" class="btn-small red-text">Comment</a>
-                          </form>
+                        <!-- <form action="/lineups/<%= lineup._id %>" method="GET" class="secondary-content"> -->
+                            <a href='/comments/show/<%= lineup._id %>' type="submit" class="btn-small red-text">Comment</a>
+                          <!-- </form> -->
                         <% if (u._id.equals(user && user._id)) { %>
                           <form action="/lineups/<%= lineup._id %>?_method=DELETE" method="POST" class="secondary-content">
                             <button type="submit" class="btn-small red-text">DELETE LINEUP</button>

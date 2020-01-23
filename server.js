@@ -20,6 +20,7 @@ const app = express();
 // require our routes
 
 var usersRouter = require('./routes/users');
+var commentsRouter = require('./routes/comments');
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -41,6 +42,7 @@ app.use(methodOverride('_method'));
 
 app.use("/", indexRouter);
 app.use("/", usersRouter);
+app.use("/comments", commentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

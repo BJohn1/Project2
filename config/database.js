@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/alltime5',{
+mongoose.connect(process.env.DATABASE_URL,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true //get ride of deprication warning

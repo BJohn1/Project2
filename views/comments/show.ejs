@@ -14,11 +14,21 @@
     <ul id='nav' >
         <li class='nav'><a class='nav' href="">MY LINEUPS</a></li>
         <li class='nav'><a class='nav' href='/users/new'>CREATE A NEW LINEUP</a></li>
-        <li class='nav'><a class='nav' href="">ALL LINEUPS</a></li>
+        <li class='nav'><a class='nav' href="/users">ALL LINEUPS</a></li>
         <li class='nav'><a class='nav' href="">TOP RANKED LINEUPS</a></li>
         <li class='nav'>
         </li>
       </ul>
-      
+      <form action="/comments/lineupcomment/<%= id %>" method="POST">
+        <textarea name="comment" class="white-text"></textarea>
+        <button type="submit" class="btn white-text">Add Comment</button>
+      </form>
+      <% lineup.comment.forEach( c => { %> 
+        <ul>
+        <li><%= c.comment %><form action="/lineups/<%= lineup._id %>?_method=DELETE" method="POST" class="secondary-content">
+          <button type="submit" class="btn-small red-text">DELETE COMMENT</button>
+        </form></li>
+      </ul>
+      <% }) %>
 </body>
 </html>

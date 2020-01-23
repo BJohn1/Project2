@@ -52,15 +52,18 @@
                         <span class="title"><%- lineup.smallForward %></span>
                         <span class="title"><%- lineup.powerForward %></span>
                         <span class="title"><%- lineup.center %></span>
+                        <form action="/lineups/<%= lineup._id %>/comments" method="GET" class="secondary-content">
+                            <a href='/lineups/show.ejs' type="submit" class="btn-small red-text">Comment</a>
+                          </form>
                         <% if (u._id.equals(user && user._id)) { %>
                           <form action="/lineups/<%= lineup._id %>?_method=DELETE" method="POST" class="secondary-content">
-                            <button type="submit" class="btn-small red-text">X</button>
+                            <button type="submit" class="btn-small red-text">DELETE LINEUP</button>
                           </form>
                         <% } %>
                       </li>
                     <% }) %>
                   </ul>
-                  <% if (u._id.equals(u && u._id)) { %>
+                  <% if (u._id.equals(user && user._id)) { %>
                     <div class="card-action">
                       <form action="/lineups" method="POST">
                         <label>Point Guard

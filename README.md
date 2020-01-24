@@ -32,7 +32,7 @@ ALL TIME STARTING 5
 
 ## Getting Started
 
-**<a href="https://alltime5.herokuapp.com/">CLICK HERE</a> to get started and create your All Time Starting 5 using the drop down menu for each of the 5 positions. HAVE FUN and make sure to leave tons of comments. **
+**<a href="https://alltime5.herokuapp.com/">CLICK HERE</a> to get started and create your All Time Starting 5 using the drop down menu for each of the 5 positions. HAVE FUN and make sure to leave tons of comments.**
 
 ---
 

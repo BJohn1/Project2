@@ -59,12 +59,17 @@ const edit = (req, res) => {
 }
 
 const update = (req, res) => {
-    console.log(req.body);
-    Todo.update(req.params.id, req.body.todo);
-    console.log(req.body.todo)
-    res.redirect('/todos');
-  }
-  
+    req.user.lineups.forEach((l,idx) => {
+        console.log(l)
+        l.comment.forEach((c, ix) => {
+            if(req.params.id == c._id){
+                console.log("this is c._id: ", c)
+            
+        c.comment = req.body.comment;
+        req.user.save();
+            }
+    res.redirect(`/comments/show/${l._id}`); 
+        })})} 
 
 module.exports={
     create,

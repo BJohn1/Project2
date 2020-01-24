@@ -11,6 +11,8 @@ router.get('/show/:id', commentsCtrl.show)
 
 router.get('/edit/:id', commentsCtrl.edit)
 
+router.put('/edit/:id', commentsCtrl.update)
+
 router.post('/lineupcomment/:id', isLoggedIn, commentsCtrl.create);
 
 router.delete('/lineupcomment/:id', commentsCtrl.delete);

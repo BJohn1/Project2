@@ -12,10 +12,9 @@
 <body>
     <h1>All Time Starting 5</h1>
     <ul id='nav' >
-        <li class='nav'><a class='nav' href="">MY LINEUPS</a></li>
-        <li class='nav'><a class='nav' href='/users/new'>CREATE A NEW LINEUP</a></li>
+        
         <li class='nav'><a class='nav' href="/users">ALL LINEUPS</a></li>
-        <li class='nav'><a class='nav' href="">TOP RANKED LINEUPS</a></li>
+        
         <li class='nav'>
         <% if (user) { %>
             <a class='nav' id='login' href="/logout">Log Out</a>
@@ -46,15 +45,15 @@
                   <ul class="collection">
                     <% u.lineups.forEach(function(lineup) { %>
                       <li class="collection-item blue-grey-text text-darken-2">
-                        <!-- Add delete form - don't forget to install method-override -->
+                       
                         <span class="title"><%- lineup.pointGuard %></span>
                         <span class="title"><%- lineup.shootingGuard %></span>
                         <span class="title"><%- lineup.smallForward %></span>
                         <span class="title"><%- lineup.powerForward %></span>
                         <span class="title"><%- lineup.center %></span>
-                        <!-- <form action="/lineups/<%= lineup._id %>" method="GET" class="secondary-content"> -->
+                      
                             <a href='/comments/show/<%= lineup._id %>' type="submit" class="btn-small red-text">Comment</a>
-                          <!-- </form> -->
+                        
                         <% if (u._id.equals(user && user._id)) { %>
                           <form action="/lineups/<%= lineup._id %>?_method=DELETE" method="POST" class="secondary-content">
                             <button type="submit" class="btn-small red-text">DELETE LINEUP</button>

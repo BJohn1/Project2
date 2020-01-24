@@ -11,6 +11,8 @@ router.get('/show/:id', commentsCtrl.show)
 
 router.post('/lineupcomment/:id', isLoggedIn, commentsCtrl.create);
 
+router.delete('/lineupcomment/:id', commentsCtrl.delete);
+
  module.exports = router; 
 
 

@@ -25,7 +25,8 @@
       </form>
       <% lineup.comment.forEach( c => { %> 
         <ul>
-        <li><%= c.comment %><form action="/lineups/<%= lineup._id %>?_method=DELETE" method="POST" class="secondary-content">
+        <li><%= c.comment %><form action="/comments/lineupcomment/<%= id %>?_method=DELETE" method="POST" class="secondary-content">
+          <input type="hidden" name="commentId" value="<%= c._id %>">
           <button type="submit" class="btn-small red-text">DELETE COMMENT</button>
         </form></li>
       </ul>

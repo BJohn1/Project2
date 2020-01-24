@@ -18,7 +18,7 @@ const show = (req, res) => {
     User.find({'lineups._id' : req.params.id }, (err,lineup)=>{
         const userLineup = lineup[0]
         const foundLineup = userLineup.lineups.filter(l => l._id.toString() === req.params.id)[0]
-        console.log(foundLineup)
+        //console.log(foundLineup)
         res.render('comments/show', {
             id: req.params.id,
             lineup: foundLineup
@@ -28,7 +28,23 @@ const show = (req, res) => {
 
 }
 
+const delComment = (req, res) => {
+    User.findById(req.user._id, async (err, user) => {
+        if(err) {
+            console.log(err);
+        }
+        const hi = user.lineups.id(req.params.id);
+        hi.comment = hi.comment.filter(c => c._id.toString() !== req.body.commentId)
+        // console.log(hi)
+        await user.save();
+        res.redirect(`/comments/show/${req.params.id}`);
+    })
+   //console.log(req.body.commentId);
+}
+  
+
 module.exports={
     create,
-    show
+    show,
+    delete: delComment,
 }

@@ -6,7 +6,7 @@
 
 ALL TIME STARTING 5
 
-**This app is an awesome opportunity for basketball fans all over the world to create their very own DREAM TEAM.<br>The objective is to choose your favorite (or the best) 5 basketball players from a list of all NBA players in HISTORY! Once you choose your squad, your friends and fans can comment, applaud, or critique your squad.<br> This is essentially one big glamorous fantasy basketball popularity contest. <br> Do you have what it takes to create the best starting 5? **
+**This app is an awesome opportunity for basketball fans all over the world to create their very own DREAM TEAM.<br>The objective is to choose your favorite (or the best) 5 basketball players from a list of all NBA players in HISTORY! Once you choose your squad, your friends and fans can comment, applaud, or critique your squad.<br> This is essentially one big glamorous fantasy basketball popularity contest. <br> Do you have what it takes to create the best starting 5?**
 
 ---
 

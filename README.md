@@ -12,6 +12,16 @@ ALL TIME STARTING 5
 
 ## Screenshots
 
+<img src="public/images/Screen Shot 2020-01-24 at 9.09.20 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.09.32 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.09.43 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.09.47 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.10.10 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.10.30 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.10.38 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.10.54 AM.png" alt="Italian Trulli">
+<img src="public/images/Screen Shot 2020-01-24 at 9.11.10 AM.png" alt="Italian Trulli">
+
 ---
 
 ## Technologies Used 

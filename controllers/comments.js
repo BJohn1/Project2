@@ -60,16 +60,18 @@ const edit = (req, res) => {
 
 const update = (req, res) => {
     req.user.lineups.forEach((l,idx) => {
-        console.log(l)
+        console.log(l._id)
         l.comment.forEach((c, ix) => {
             if(req.params.id == c._id){
                 console.log("this is c._id: ", c)
-            
-        c.comment = req.body.comment;
-        req.user.save();
+                c.comment = req.body.comment;
+                req.user.save();
+                console.log(c.comment)
+                res.redirect(`/comments/show/${l._id}`);
             }
-    res.redirect(`/comments/show/${l._id}`); 
-        })})} 
+        })
+    })
+} 
 
 module.exports={
     create,

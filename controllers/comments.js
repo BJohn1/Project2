@@ -34,6 +34,7 @@ const delComment = (req, res) => {
             console.log(err);
         }
         const hi = user.lineups.id(req.params.id);
+        console.log(hi)
         hi.comment = hi.comment.filter(c => c._id.toString() !== req.body.commentId)
         // console.log(hi)
         await user.save();
@@ -41,10 +42,34 @@ const delComment = (req, res) => {
     })
    //console.log(req.body.commentId);
 }
+
+const edit = (req, res) => {
+    /* req.user.lineups.forEach((l,idx) => {
+        l.comment.forEach((c,idx) => {
+            if(c.id===req.params.id){
+                console.log(c.comment)
+                const comment=c.comment
+            }
+        })
+    })*/
+    res.render('comments/edit',{
+        id: req.params.id,
+        user: req.user,
+    })
+}
+
+const update = (req, res) => {
+    console.log(req.body);
+    Todo.update(req.params.id, req.body.todo);
+    console.log(req.body.todo)
+    res.redirect('/todos');
+  }
   
 
 module.exports={
     create,
     show,
     delete: delComment,
+    edit,
+    update,
 }

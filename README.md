@@ -26,7 +26,7 @@ ALL TIME STARTING 5
 
 ## Technologies Used 
 
-**Node.js, Express.js, JavaScript, Mongoose, CSS, MongoDB, Google OAuth**
+**Node.js, Express.js, JavaScript, Mongoose, CSS, MongoDB, Google OAuth, Heroku**
 
 ---
 
